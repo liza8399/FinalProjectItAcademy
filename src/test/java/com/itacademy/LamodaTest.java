@@ -70,6 +70,31 @@ public class LamodaTest extends BaseTest {
         Assert.assertTrue(itemPage.getColorDescription().getText().contains(color));
     }
 
+    @Test
+    public void addItemToCartTest(){
+        DriverManager.getDriver().get("https://www.lamoda.by/");
+        DriverManager.getDriver().manage().window().maximize();
+        HomePage homePage = new HomePage(DriverManager.getDriver());
+        homePage.acceptCookies();
+        homePage.sendKeysToSearchInputField("пальто мужское");
 
+        SearchPage searchPage = homePage.searchBtnClick();
+        searchPage.sortProducts("Сначала дешевле");
+        searchPage.chooseSize("52");
+        searchPage.chooseBrand("Tommy");
 
+        ItemPage itemPage = searchPage.clickToItem(1);
+        String itemBrandInfo = itemPage.getItemBrandInfo();
+        String itemTypeInfo = itemPage.getItemTypeInfo();
+        String itemPriceInfo = itemPage.getItemPriceInfo();
+        itemPage.chooseSizeOfItem("52");
+        itemPage.clickAddToCartBtn();
+        Assert.assertTrue(itemPage.getItemWasAddedToCartFrame().isDisplayed());
+        Assert.assertEquals(itemPage.getItemWasAddedToCartTitle().getText(), "Товар добавлен в корзину");
+
+        CartPage cartPage = itemPage.clickGoToTheCartBtn();
+        Assert.assertEquals(cartPage.getPriceInTheCart().getText(), itemPriceInfo);
+        Assert.assertTrue(cartPage.getItemTitle().getText().contains(itemBrandInfo));
+        Assert.assertTrue(cartPage.getItemTitle().getText().contains(itemTypeInfo));
+    }
 }
