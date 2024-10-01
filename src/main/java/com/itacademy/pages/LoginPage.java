@@ -50,10 +50,10 @@ public class LoginPage {
         submitButton.click();
     }
 
-    public void checkErrorMessage() {
-        Assert.assertTrue(errorMessage.isDisplayed());
-        Assert.assertEquals(errorMessage.getText(), "Неверный логин или пароль.");
+    public String getErrorMessage() {
+        return errorMessage.getText();
     }
+
 
 
 

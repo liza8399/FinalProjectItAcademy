@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite3" verbose="2" >
+
+    <test name="LamodaTest" >
+        <classes>
+            <class name="com.itacademy.LamodaTest">
+                <methods>
+                    <include name="materialAndColorFiltersWorkTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

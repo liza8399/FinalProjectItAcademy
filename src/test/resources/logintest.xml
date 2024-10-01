@@ -5,7 +5,7 @@
         <classes>
             <class name="com.itacademy.LamodaTest">
             <methods>
-<!--                <method name="checkAsserts"/>-->
+                <include name="signUpTest"/>
             </methods>
             </class>
         </classes>

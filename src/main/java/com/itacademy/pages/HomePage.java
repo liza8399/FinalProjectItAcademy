@@ -9,7 +9,7 @@ import org.testng.Assert;
 
 public class HomePage {
 
-    private WebDriver driver;
+    private final WebDriver driver;
 
     @FindBy (xpath = "//*[@class='x-button x-button_secondaryFilledWeb7184 x-button_32 _button_1xhq2_8 _item_1xhq2_13']")
     private WebElement loginBtn;
@@ -23,6 +23,8 @@ public class HomePage {
     @FindBy(xpath ="//*[text()='Принять']")
     private WebElement acceptCookiesBtn;
 
+    @FindBy(xpath ="//*[@class='_input_1su1z_19 _inputShown_1su1z_43']")
+    private WebElement searchInputField;
 
     public HomePage(WebDriver driver) {
         this.driver = DriverManager.getDriver();
@@ -37,5 +39,15 @@ public class HomePage {
     public LoginPage loginBtnClick() {
         loginBtn.click();
         return new LoginPage(DriverManager.getDriver());
+    }
+
+    public void sendKeysToSearchInputField(String product) {
+        searchInputField.click();
+        searchInputField.sendKeys(product);
+    }
+
+    public SearchPage searchBtnClick() {
+        searchBtn.click();
+        return new SearchPage(DriverManager.getDriver());
     }
 }
