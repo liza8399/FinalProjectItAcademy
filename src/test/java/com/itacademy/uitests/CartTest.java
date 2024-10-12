@@ -1,10 +1,8 @@
 package com.itacademy.uitests;
 
 import com.itacademy.pages.CartPage;
-import com.itacademy.pages.HomePage;
 import com.itacademy.pages.ItemPage;
 import com.itacademy.pages.SearchPage;
-import com.itacademy.utils.DriverManager;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,15 +11,15 @@ public class CartTest extends BaseTest {
     @Test
     public void addItemToCartTest(){
 
-        HomePage homePage = new HomePage(DriverManager.getDriver());
+
         homePage.sendKeysToSearchInputField("пальто мужское");
 
         SearchPage searchPage = homePage.searchBtnClick();
         searchPage.sortProducts("Сначала дешевле");
         searchPage.chooseSize("52");
-        searchPage.chooseBrand("Tommy");
+        searchPage.chooseBrand();
 
-        ItemPage itemPage = searchPage.clickToItem(1);
+        ItemPage itemPage = searchPage.clickToItem(0);
         String itemBrandInfo = itemPage.getItemBrandInfo();
         String itemTypeInfo = itemPage.getItemTypeInfo();
         String itemPriceInfo = itemPage.getItemPriceInfo();

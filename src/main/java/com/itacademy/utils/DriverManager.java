@@ -9,7 +9,7 @@ import java.time.Duration;
 
 public class DriverManager {
     private volatile static WebDriver driver;
-    private static ThreadLocal<WebDriver> threadLocal = new ThreadLocal<>();
+    private static final ThreadLocal<WebDriver> threadLocal = new ThreadLocal<>();
 
     private DriverManager() {
     }

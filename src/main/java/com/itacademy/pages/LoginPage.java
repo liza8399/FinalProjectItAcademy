@@ -12,7 +12,7 @@ public class LoginPage {
 
     private WebDriver driver;
 
-    @FindBy(xpath = "//input[@autocomplete='username']")
+    @FindBy(xpath = "//input[@aria-label='Электронная почта']")
     private WebElement emailInputField;
 
     @FindBy(xpath = "//input[@name='password']")

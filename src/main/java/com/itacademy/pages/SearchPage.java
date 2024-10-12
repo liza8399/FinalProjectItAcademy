@@ -154,12 +154,11 @@ public class SearchPage {
         Waiters.wait(3000);
     }
 
-    public void chooseBrand(String brand) {
+    public void chooseBrand() {
         brandChoice.click();
-        Waiters.wait(1000);
-        brandInput.sendKeys(brand);
-        Waiters.wait(1000);
-        brandSuggestionPopUp.findElement(By.xpath(".//*[contains(text(), '" + brand + "')]")).click();
+        Waiters.wait(3000);
+        List <WebElement> brands = brandSuggestionPopUp.findElements(By.xpath("//*[@class='_valueContent_htwrd_36']"));
+        brands.getFirst().click();
         Waiters.wait(5000);
         confirmSelectionBtn.click();
         Waiters.wait(3000);

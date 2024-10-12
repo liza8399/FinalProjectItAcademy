@@ -16,7 +16,6 @@ public class SearchTest extends BaseTest {
     @Test
     public void searchTest(){
 
-        HomePage homePage = new HomePage(DriverManager.getDriver());
         homePage.sendKeysToSearchInputField("рубашка женская");
 
         SearchPage searchPage = homePage.searchBtnClick();
@@ -28,7 +27,6 @@ public class SearchTest extends BaseTest {
     @Test
     public void searchWithFiltersTest() {
 
-        HomePage homePage = new HomePage(DriverManager.getDriver());
         homePage.sendKeysToSearchInputField("кроссовки женские");
 
         SearchPage searchPage = homePage.searchBtnClick();
