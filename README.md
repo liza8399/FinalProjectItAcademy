@@ -1,7 +1,6 @@
-# FinalProject
-# Author - Fralova Lizaveta
-
-# Project for lamoda.by - one of the largest online stores in the CIS
+# FinalProject for ItAcademy
+Author - Fralova Lizaveta
+Project for lamoda.by - one of the largest online stores in the CIS
 
 ## Technologies
 Project is created with:
