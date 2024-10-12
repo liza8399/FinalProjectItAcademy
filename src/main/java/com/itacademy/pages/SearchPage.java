@@ -134,6 +134,7 @@ public class SearchPage {
         }
         Waiters.wait(3000);
         confirmSelectionBtn.click();
+        Waiters.wait(3000);
 
     }
 

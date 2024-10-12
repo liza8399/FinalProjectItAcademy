@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite3" verbose="2" >
+
+    <test name="CartTest" >
+        <classes>
+            <class name="com.itacademy.uitests.CartTest"/>
+            <class name="com.itacademy.uitests.LogInTest"/>
+            <class name="com.itacademy.uitests.SearchTest"/>
+        </classes>
+    </test>
+
+</suite>
