@@ -20,18 +20,18 @@ Project is created with:
 
 ## Listeners:
 * TestListeners - created listeners with LOGGERs.
-* ElementActionListener - created listeners for actions.
+* SeleniumListener - created listeners for actions.
 
 ## Utils:
-* ConfigurationReader
-* DriverFactory
-* DriverManager
-* JSExecutorUtils
-* ScreenshotUtils - for screenshots
-* Waiters
+* ConfigurationReader - loading the browser value from the file configuration.properties but also overriding the value from the file.
+* DriverFactory - creating WebDriver.
+* DriverManager - responsible for managing the WebDriver object and ensuring its creation and proper termination in a multi-threaded environment.
+* JSExecutorUtils - utils for work with elements, that could be non-interactive. 
+* ScreenshotUtils - for screenshots.
+* Waiters 
 
 ## Resources:
-* allure properties - to specify settings for the Allure report
+* allure.properties - to specify settings for the Allure report
 * configuration.properties 
 * log4j2.properties - to specify settings for log4j2
 
@@ -49,9 +49,9 @@ APILamodaTest - created for API tests
 login.json
 
 ### suites:
-* alltest
-* apitestsuite
-* carttest
-* logintet
-* searchtest
+* alltest - suite for all UI tests.
+* apitestsuite - suite for all API tests.
+* carttest - suite for cart tests.
+* logintet - suite for login tests.
+* searchtest - suite for search tests.
 
