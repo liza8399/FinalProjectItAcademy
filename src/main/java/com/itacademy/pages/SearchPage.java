@@ -20,7 +20,6 @@ public class SearchPage {
     @FindBy(xpath ="//h2[@class='_titleText_641wy_15 ui-catalog-search-head-title']")
     private WebElement pageTitle;
 
-    @Getter
     @FindBy(id="catalog-main")
     private WebElement catalogField;
 

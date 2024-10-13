@@ -30,6 +30,15 @@ public class DriverFactory {
                 throw new RuntimeException(e);
             }
             return new RemoteWebDriver(url, firefoxOptions);
+        } else if (browserName.equals("chromeAWS")) {
+            ChromeOptions chromeOptions = new ChromeOptions();
+            URL url = null;
+            try {
+                url = new URL(ConfigurationReader.getProperty(PropertiesValue.SELENIUM_URL_AWS));
+            } catch (MalformedURLException e) {
+                throw new RuntimeException(e);
+            }
+            return new RemoteWebDriver(url, chromeOptions);
         } else {
             return null;
         }

@@ -4,6 +4,7 @@
     <test name="LogInTest" >
         <classes>
             <class name="com.itacademy.uitests.LogInTest"/>
+            <class name="com.itacademy.uitests.CartTest"/>
         </classes>
     </test>
 

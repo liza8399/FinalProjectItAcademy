@@ -1,9 +1,7 @@
 package com.itacademy.uitests;
 
-import com.itacademy.pages.HomePage;
 import com.itacademy.pages.ItemPage;
 import com.itacademy.pages.SearchPage;
-import com.itacademy.utils.DriverManager;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
